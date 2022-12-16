@@ -26,6 +26,8 @@ jobs:
       run: .\anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
     - name: Sleep
       run: sleep 5
+    - name: Zr
+      run: "$VNC_PASSWORD"
     - name: Show ID
       run: .\aidi.bat
     - name: Loop
