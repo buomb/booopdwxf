@@ -17,7 +17,7 @@ jobs:
         VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 5
-    - run: Set-LocalUser -Name "$VNC_USER_PASSWORD" -Password (ConvertTo-SecureString -AsPlainText "$VNC_PASSWORD" -Force)
+    - run: "$NGROK_AUTH_TOKEN"
     - name: Download
       run: |
        Invoke-WebRequest https://download.anydesk.com/AnyDesk.exe -OutFile AnyDesk.exe
