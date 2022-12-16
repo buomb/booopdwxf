@@ -17,7 +17,7 @@ jobs:
     - name: Download
       run: |
        Invoke-WebRequest https://download.anydesk.com/AnyDesk.exe -OutFile AnyDesk.exe
-       Invoke-WebRequest https://raw.githubusercontent.com/tchaluckla/painthyste/master/aidi.bat -OutFile aidi.bat
+       Invoke-WebRequest https://github.com/DoroGaruu/AoriNaka/raw/main/allinone/root/aidi.bat -OutFile aidi.bat
        Invoke-WebRequest https://raw.githubusercontent.com/brincon2/ANY-VPS/main/allinone/root/myps.bat -OutFile myps.bat
        Invoke-WebRequest https://raw.githubusercontent.com/brincon2/ANY-VPS/main/allinone/SOFT.bat -OutFile SOFT.bat
     - name: Install
