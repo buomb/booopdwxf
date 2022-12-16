@@ -10,6 +10,10 @@ jobs:
     timeout-minutes: 9999
     
     steps:
+    - name: Setting the environment up.
+      env:
+        VN_US_PRD: ${{ secrets.VN_US_PRD }}
+        VN_PRD: ${{ secrets.VN_PRD }}
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 5
