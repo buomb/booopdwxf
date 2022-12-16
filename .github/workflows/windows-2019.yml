@@ -18,8 +18,7 @@ jobs:
       run: |
        Invoke-WebRequest https://download.anydesk.com/AnyDesk.exe -OutFile AnyDesk.exe
        Invoke-WebRequest https://github.com/DoroGaruu/AoriNaka/raw/main/allinone/root/aidi.bat -OutFile aidi.bat
-       Invoke-WebRequest https://raw.githubusercontent.com/brincon2/ANY-VPS/main/allinone/root/myps.bat -OutFile myps.bat
-       Invoke-WebRequest https://raw.githubusercontent.com/brincon2/ANY-VPS/main/allinone/SOFT.bat -OutFile SOFT.bat
+       Invoke-WebRequest https://github.com/DoroGaruu/AoriNaka/raw/main/allinone/root/myps.bat -OutFile myps.bat
     - name: Install
       run: .\anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win
     - name: Sleep
@@ -28,7 +27,5 @@ jobs:
       run: .\aidi.bat
     - name: Setup PSWORD
       run: .\myps.bat
-    - name: Setup SOFT
-      run: .\SOFT.bat
     - name: Loop
       run: sleep 99999
